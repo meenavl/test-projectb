@@ -13,8 +13,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           repository: meenavl/submodule-projecta
-          env:
-            GITHUB_TOKEN: ${{ secrets.PAT }}
+          token: ${{ secrets.PAT }}
 
       - name: Pull & update submodules recursively
         run: |
