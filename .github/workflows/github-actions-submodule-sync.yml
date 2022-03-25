@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           repository: meenavl/submodule-projecta
-          token: ${{ secrets.REPO_KEY }}
+          token: $REPO_KEY
 
       - name: Pull & update submodules recursively
         run: |
