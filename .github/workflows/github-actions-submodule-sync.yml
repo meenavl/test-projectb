@@ -12,8 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          path: https://github.com/meenavl/submodule-projecta.git
-          token: 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
+          repository: meenavl/submodule-projecta
+          token: ${{ secrets.PRIVATE_TOKEN_GITHUB }}
 
       - name: Pull & update submodules recursively
         run: |
@@ -21,8 +21,8 @@ jobs:
           git submodule update --recursive --remote
       - name: Commit
         run: |
-          git config user.email "m.palaniappan1@whitbread.com"
-          git config user.name "meenavl"
+          git config user.email "palani.meena1@gmail.com"
+          git config user.name "GitHub Actions - update submodules"
           git add --all
           git commit -m "Update submodules" || echo "No changes to commit"
-          git push origin develop
+          git push
