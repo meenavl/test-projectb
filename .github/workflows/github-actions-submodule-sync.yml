@@ -31,5 +31,5 @@ jobs:
           git commit -m "Update submodules" || echo "No changes to commit"
           git push https://$USERNAME:${{ secrets.REPO_KEY }}@github.com/meenavl/submodule-projecta.git
                 env:
-                  REPO_KEY: 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
+                  REPO_KEY: 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
                   USERNAME: meenavl
