@@ -16,8 +16,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
+          repository: meenavl/submodule-projecta
           token: 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
-          submodules: true
 
       - name: Pull & update submodules recursively
         run: |
