@@ -11,7 +11,7 @@ local.properties
 .settings/
 .loadpath
 
-# Eclipse Core test abcd
+# Eclipse Core
 #
 .project
 MANIFEST.MF
