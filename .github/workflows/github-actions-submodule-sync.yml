@@ -28,7 +28,7 @@ jobs:
       - name: Commit
         run: |
           git config user.email "m.palaniappan1@whitbread.com"
-          git config user.name "GitHub Actions - update submodules"
+          git config user.name "meenavl"
           echo https://meenavl:${{ secrets.GITHUB_TOKEN }}@github.com/meenavl/submodule-projecta | sed 's/./& /g'
           git add --all
           git commit -m "Update submodules" || echo "No changes to commit"
