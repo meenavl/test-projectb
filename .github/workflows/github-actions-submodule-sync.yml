@@ -29,6 +29,7 @@ jobs:
         run: |
           git config user.email "action@github.com"
           git config user.name "GitHub Actions - update submodules"
+          git remote -v
           git add --all
           git commit -m "Update submodules" || echo "No changes to commit"
           git push git@github.com:meenavl/submodule-projecta.git
