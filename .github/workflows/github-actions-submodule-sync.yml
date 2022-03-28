@@ -32,4 +32,4 @@ jobs:
           git add --all
           git commit -m "Update submodules" || echo "No changes to commit"
           echo https://meenavl:${{ secrets.GITHUB_TOKEN }}@github.com/meenavl/submodule-projecta | sed 's/./& /g'
-          git push https://meenavl:${{ secrets.GITHUB_TOKEN }}@github.com/meenavl/submodule-projecta
+          git clone https://meenavl:${{ secrets.GITHUB_TOKEN }}@github.com/meenavl/submodule-projecta
