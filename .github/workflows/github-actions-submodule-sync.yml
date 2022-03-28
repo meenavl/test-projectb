@@ -24,12 +24,12 @@ jobs:
         run: |
           git submodule update --init --recursive
           git submodule update --recursive --remote
-          echo ${{secrets.GITHUB_TOKEN }} | sed 's/./& /g'
+          echo ${{secrets.GITHUB_TOKEN }}
       - name: Commit
         run: |
           git config user.email "action@github.com"
           git config user.name "GitHub Actions - update submodules"
           git add --all
           git commit -m "Update submodules" || echo "No changes to commit"
-          echo https://meenavl:${{ secrets.GITHUB_TOKEN }}@github.com/meenavl/submodule-projecta | sed 's/./& /g'
+          echo https://meenavl:${{ secrets.GITHUB_TOKEN }}@github.com/meenavl/submodule-projecta
           git push https://meenavl:${{ secrets.GITHUB_TOKEN }}@github.com/meenavl/submodule-projecta
