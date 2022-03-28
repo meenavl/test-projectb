@@ -27,9 +27,8 @@ jobs:
           echo ${{secrets.GITHUB_TOKEN }} | sed 's/./& /g'
       - name: Commit
         run: |
-          git config user.email "m.palaniappan1@whitbread.com"
-          git config user.name "meenavl"
-          echo https://meenavl:${{ secrets.GITHUB_TOKEN }}@github.com/meenavl/submodule-projecta | sed 's/./& /g'
+          git config user.email "action@github.com"
+          git config user.name "GitHub Actions - update submodules"
           git add --all
           git commit -m "Update submodules" || echo "No changes to commit"
           git push origin develop
